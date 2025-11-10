@@ -18,20 +18,25 @@
             @apply transition-transform transform hover:scale-105 hover:bg-emerald-700;
         } 
         .project-card {
-            @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden;
-            @apply transition-transform transform hover:-translate-y-2;
+            @apply bg-white dark:bg-gray-800 h-[440px];
         }
     </style>
 </head>
 
 <body class="bg-slate-400 dark:bg-slate-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
   <header class="bg-white dark:bg-slate-800 shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-3 flex flex-col items-center space-y-3 md:flex-row md:justify-between md:space-y-0">
+    <div
+      class="container mx-auto px-6 py-3 flex flex-col items-center space-y-3 md:flex-row md:justify-between md:space-y-0">
       <div class="text-xl md:text-2xl font-bold text-emerald-700 dark:text-emerald-500">Oleg Zavedia</div>
       <ul class="flex flex-row flex-wrap justify-center space-x-4 md:flex-nowrap md:space-x-6">
-        <li><a href="#about" class="text-sm md:text-base hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">Біографія</a></li>
-        <li><a href="#projects" class="text-sm md:text-base hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">Роботи</a></li>
-        <li><a href="#contact" class="text-sm md:text-base hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">Контакти</a></li>
+        <li><a href="#about"
+            class="text-sm md:text-base hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">Біографія</a>
+        </li>
+        <li><a href="#projects"
+            class="text-sm md:text-base hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">Роботи</a></li>
+        <li><a href="#contact"
+            class="text-sm md:text-base hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">Контакти</a>
+        </li>
       </ul>
     </div>
   </header>
@@ -47,7 +52,7 @@
           <h1 class="text-4xl font-bold mb-2">Oleg Zavedia</h1>
           <p class="text-xl text-emerald-700 dark:text-emerald-500 font-medium mb-4">Студент IT | Починаючий розробник
           </p>
-          <p class="text-lg mb-6 leading-relaxed">
+          <p class="text-lg mb-2 leading-relaxed">
             Привіт! Я, студент Черкаського Художньо-Технічного коледжу, навчаюся за спеціальністю "Комп'ютерні науки".
             Мене
             захоплює процес створення сайтів, тож я активно вивчаю FrontEnd. Я шукаю можливість застосувати свої знання
@@ -58,66 +63,128 @@
             зробити свій внесок у розвиток WEB-продуктів.
           </p>
           <a href="" download class="btn-primary">
-            Завантажити моє резюме (CV)
+            Завантажити резюме в PDF (CV)
           </a>
         </div>
       </div>
     </section>
     <section id="projects" class="mb-24">
       <h2 class="text-3xl font-bold text-center mb-12">Мої Роботи</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="project-card">
-          <img src="https://placehold.co/600x400/93C5FD/333?text=Проект+1" alt="Зображення проекту 1"
-            class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2">Tabs</h3>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Короткий опис проекту. Наприклад, це був мій курсовий проект з використанням HTML, CSS та JavaScript для
-              створення...
-            </p>
-            <div class="flex justify-between items-center">
-              <a href="#" target="_blank"
-                class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">GitHub</a>
-              <a href="https://moonraye.github.io/tab-system/" target="_blank"
-                class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Live
-                Demo</a>
+      <div class="cards-container relative overflow-hidden m-6">
+        <div class="flex transition-transform duration-500 ease-in-out" id="cards-track">
+          <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="project-card rounded-lg overflow-hidden shadow-lg px-4">
+            <img src="https://placehold.co/600x400/93C5FD/333?text=Проект+1" alt="Зображення проекту 1"
+              class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">Tabs</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Проєкт "Tab System" — це інтерактивні вкладки. Дозволяє організувати контент на сайті. Реалізовано на
+                HTML, JS та Tailwind CSS.
+              </p>
+              <div class="flex justify-between items-center">
+                <a href="#" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">GitHub</a>
+                <a href="https://moonraye.github.io/tab-system/" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Live
+                  Demo</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="project-card">
-          <img src="https://placehold.co/600x400/6EE7B7/333?text=Проект+2" alt="Зображення проекту 2"
-            class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2">Cookie Checker</h3>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Опис другого проекту. Можливо, це API, написаний на Node.js, або невеликий додаток на React.
-            </p>
-            <div class="flex justify-between items-center">
-              <a href="#" target="_blank"
-                class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">GitHub</a>
-              <a href="https://moonraye.github.io/cookie-popup/" target="_blank"
-                class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Live
-                Demo</a>
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="project-card rounded-lg overflow-hidden shadow-lg px-4">
+            <img src="https://placehold.co/600x400/6EE7B7/333?text=Проект+2" alt="Зображення проекту 2"
+              class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">Cookie Checker</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Проєкт "Cookie Popup" — це спливаюче вікно згоди. Інформує користувачів про файли cookie. Реалізовано на HTML, JS та Tailwind CSS.
+              </p>
+              <div class="flex justify-between items-center">
+                <a href="#" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">GitHub</a>
+                <a href="https://moonraye.github.io/cookie-popup/" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Live
+                  Demo</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="project-card">
-          <img src="https://placehold.co/600x400/FBCFE8/333?text=Проект+3" alt="Зображення проекту 3"
-            class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-2">Textarea</h3>
-            <p class="text-gray-700 dark:text-gray-300 mb-4">
-              Ще один проект, над яким ви працюєте. Опишіть технології, які ви тут вивчаєте.
-            </p>
-            <div class="flex justify-between items-center">
-              <a href="#" target="_blank"
-                class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">GitHub</a>
-              <a href="https://moonraye.github.io/textarea/" target="_blank"
-                class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Live
-                Demo</a>
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="project-card rounded-lg overflow-hidden shadow-lg px-4">
+            <img src="https://placehold.co/600x400/FBCFE8/333?text=Проект+3" alt="Зображення проекту 3"
+              class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">Textarea</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Проєкт "Textarea" — поле вводу з лічильником символів. Обмежує довжину тексту в реальному часі.
+                Реалізовано на HTML, JS та Tailwind CSS.
+              </p>
+              <div class="flex justify-between items-center">
+                <a href="#" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">GitHub</a>
+                <a href="https://moonraye.github.io/textarea/" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Live
+                  Demo</a>
+              </div>
             </div>
           </div>
         </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="project-card rounded-lg overflow-hidden shadow-lg px-4">
+            <img src="https://placehold.co/600x400/FBCFE8/333?text=Проект+3" alt="Зображення проекту 3"
+              class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">Textarea</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Проєкт "Textarea" — поле вводу з лічильником символів. Обмежує довжину тексту в реальному часі.
+                Реалізовано на HTML, JS та Tailwind CSS.
+              </p>
+              <div class="flex justify-between items-center">
+                <a href="#" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">GitHub</a>
+                <a href="https://moonraye.github.io/textarea/" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Live
+                  Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+          <div class="project-card rounded-lg overflow-hidden shadow-lg px-4">
+            <img src="https://placehold.co/600x400/FBCFE8/333?text=Проект+3" alt="Зображення проекту 3"
+              class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2">Textarea</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-4">
+                Проєкт "Textarea" — поле вводу з лічильником символів. Обмежує довжину тексту в реальному часі.
+                Реалізовано на HTML, JS та Tailwind CSS.
+              </p>
+              <div class="flex justify-between items-center">
+                <a href="#" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">GitHub</a>
+                <a href="https://moonraye.github.io/textarea/" target="_blank"
+                  class="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">Live
+                  Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <button id="prev-slide"
+          class="absolute top-1/2 left-2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow-md hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button id="next-slide"
+          class="absolute top-1/2 right-2 -translate-y-1/2 z-10 bg-white/70 p-2 rounded-full shadow-md hover:bg-white disabled:opacity-50 disabled:cursor-not-allowed">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
       </div>
     </section>
     <section id="contact">
@@ -127,15 +194,16 @@
       <div class="contact-info flex flex-col m-auto max-w-2xl gap-5">
         <div class="SocialNetworks p-5 mt-0 rounded-tl-lg shadow-md bg-gray-50 dark:bg-gray-800 text-xl
             items-center flex justify-evenly lg:col-start-1 lg:row-start-2">
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Moonraye" target="_blank" rel="noopener noreferrer">
             <img class="max-w-[50px] rounded-full border-4 border-slate-300 hover:border-blue-700 hover:duration-400 hover:transition
                     shadow-md" src="portfolio/img/github.png">
           </a>
-          <a href="https://ua.linkedin.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/%D0%BE%D0%BB%D0%B5%D0%B3-%D0%B7%D0%B0%D0%B2%D0%B5%D0%B4%D1%96%D1%8F-90230a30b/"
+            target="_blank" rel="noopener noreferrer">
             <img class="max-w-[50px] rounded-full border-4 border-slate-300 hover:border-blue-700 hover:duration-400 hover:transition
                     shadow-md" src="portfolio/img/linkedin.png">
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://t.me/aleeeeeeeh" target="_blank" rel="noopener noreferrer">
             <img class="max-w-[50px] rounded-full border-4 border-slate-300 hover:border-blue-700 hover:duration-400 hover:transition
                     shadow-md" src="portfolio/img/telegram.png">
           </a>
@@ -178,6 +246,6 @@
       <p>2025 Ваше Ім'я Прізвище. Всі права захищено.</p>
     </div>
   </footer>
+  <script src="portfolio/src/script.js"></script>
 </body>
-
 </html>
