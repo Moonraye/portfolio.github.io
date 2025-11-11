@@ -1,0 +1,12 @@
+@import "tailwindcss";
+body {
+  font-family: "Inter", sans-serif;
+}
+.btn-primary {
+  @apply inline-block bg-emerald-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg;
+  @apply transition-transform transform hover:scale-105 hover:bg-emerald-700;
+}
+.project-card {
+  @apply bg-white dark:bg-gray-800 h-[300px];
+  @apply flex flex-col rounded-lg overflow-hidden shadow-lg px-4;
+}
