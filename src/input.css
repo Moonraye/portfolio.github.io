@@ -7,7 +7,12 @@ body {
   @apply transition-transform transform hover:scale-105 hover:bg-emerald-700;
 }
 .project-card {
+<<<<<<< HEAD
   @apply bg-white dark:bg-gray-800 h-[300px] flex flex-col rounded-lg overflow-hidden shadow-lg px-4;
+=======
+  @apply bg-white dark:bg-gray-800 h-[350px];
+  @apply flex flex-col rounded-lg overflow-hidden shadow-lg px-4;
+>>>>>>> a91f58efb7f377f73999437938ad691c1d05ac42
 }
 .project-card .card-links{
   @apply justify-between items-center flex gap-4 mt-auto;
